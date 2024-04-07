@@ -34,13 +34,17 @@ Para configurar y ejecutar el proyecto localmente, sigue estos pasos:
 
 2. Instala las dependencias:
 
+    `cd seismology-api-v1`
+
+3. Instala las dependencias:
+
     `bundle install`
 
-3. Crea y migra la base de datos:
+4. Crea y migra la base de datos:
 
     `rails db:create db:migrate`
 
-4. Inicia el servidor Rails:
+5. Inicia el servidor Rails:
 
     `rails server`
 
