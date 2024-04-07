@@ -96,6 +96,29 @@ Este endpoint permite crear un comentario asociado a una característica sísmic
 
     Contenido: Error indicando que el cuerpo del comentario no puede estar vacío.
 
+## Configuración de CORS 🔓
+
+Para permitir que el frontend de la aplicación interactúe con la API desde dominios o puertos diferentes durante el desarrollo, se ha configurado Cross-Origin Resource Sharing (CORS) utilizando la gema `rack-cors`.
+
+Esta configuración es esencial para la comunicación entre el cliente y el servidor en entornos de desarrollo, ya que los navegadores restringen las solicitudes HTTP cruzadas entre diferentes dominios por razones de seguridad.
+
+### Detalles de la Configuración CORS🔑
+
+La gema `rack-cors` está configurada para permitir solicitudes desde el origen del servidor de desarrollo de React. Aquí se muestra un extracto de la configuración:
+
+```ruby
+# config/initializers/cors.rb
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+    origins 'localhost:3001', '127.0.0.1:3001'  # Ajusta según el origen de tu cliente React
+
+    resource '/api/*',
+      headers: :any,
+      methods: [:get, :post, :patch, :put, :delete, :options, :head],
+      credentials: false
+  end
+end
+```
 
 ## Frontend de la Aplicación 🎃
 
