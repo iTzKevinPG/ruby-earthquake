@@ -32,7 +32,7 @@ Para configurar y ejecutar el proyecto localmente, sigue estos pasos:
 
     `git clone https://github.com/iTzKevinPG/ruby-earthquake.git`
 
-2. Instala las dependencias:
+2. Dirigirse al proyecto del api:
 
     `cd seismology-api-v1`
 
