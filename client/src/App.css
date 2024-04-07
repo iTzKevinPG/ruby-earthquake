@@ -1,0 +1,119 @@
+.App {
+  display: flex;
+  text-align: center;
+  min-height: 100vh;
+  height: auto;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.App-header {
+  margin: 1rem;
+  color: white;
+  padding: 20px;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: hsl(from #440c97 h s l / 50%);
+  backdrop-filter: blur(0.3rem);
+  border-radius: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  user-select: none;
+  border-radius: 0.3rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.2s ease;
+}
+
+th {
+  background-color: hsl(from #440c97 h 50% 25% / 50%);
+  color: white;
+}
+
+td {
+  background-color: #f2f2f2;
+}
+
+td:hover {
+  background-color: hsl(from #440c97 h 50% 25% / 50%);
+  color: white;
+}
+
+tr:hover {
+  background-color: hsl(from #440c97 h 50% 25% / 50%);
+}
+
+.pagination {
+  padding-right: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.pagination button {
+  margin: 0 0.3rem;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #000000;
+  border-radius: 1rem;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pagination button:hover {
+  background-color: hsl(from #440c97 h 50% 25% / 50%);
+  color: white;
+}
+
+.pagination button:disabled {
+  color: grey;
+  cursor: not-allowed;
+}
+
+.pagination button.active {
+  border-color: hsl(from #440c97 h 50% 25% / 50%);
+  font-weight: bold;
+  color: white;
+  background-color: hsl(from #440c97 h 50% 25% / 50%);
+}
+
+.App-data-section {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.App-data-filter {
+  width: 100%;
+  max-width: 13rem;
+  outline: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+  border-color: hsl(from #440c97 h 50% 25% / 50%);
+}
+
+.App-data-filter:hover {
+  background-color: hsl(from #440c97 h 50% 25% / 50%);
+  color: white;
+}
+
+@media (max-width: 1000px) {
+  .App {
+    flex-direction: column;
+  }
+}

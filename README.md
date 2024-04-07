@@ -1,8 +1,8 @@
-# API de Características Sísmicas
+# API de Características Sísmicas 🧮
 
 Esta API proporciona información sobre eventos sísmicos, permitiendo a los usuarios consultar datos sobre terremotos, incluyendo su magnitud, ubicación, y más.
 
-## Modelo de Datos
+## Modelo de Datos 🔨
 
 El modelo `Earthquake` representa un evento sísmico e incluye los siguientes atributos:
 
@@ -14,7 +14,7 @@ El modelo `Earthquake` representa un evento sísmico e incluye los siguientes at
 - `coordinates`: Decimal, latitud y longitud del evento.
 - Otros atributos relevantes como `tsunami` (Boolean), `mag_type` (String), etc.
 
-## Dependencias
+## Dependencias 🦺
 
 Este proyecto utiliza las siguientes gemas:
 
@@ -24,13 +24,13 @@ Este proyecto utiliza las siguientes gemas:
 - `httparty`: Utilizada para hacer peticiones HTTP.
 - `will_paginate`: Para la paginación de resultados en la API.
 
-## Configuración y Ejecución
+## Configuración y Ejecución 🎇
 
 Para configurar y ejecutar el proyecto localmente, sigue estos pasos:
 
 1. Clona el repositorio:
 
-    `git clone [URL del repositorio]`
+    `git clone https://github.com/iTzKevinPG/ruby-earthquake.git`
 
 2. Instala las dependencias:
 
@@ -44,7 +44,7 @@ Para configurar y ejecutar el proyecto localmente, sigue estos pasos:
 
     `rails server`
 
-## Consumo de la API
+## Consumo de la API 📱
 
 La API expone los siguientes endpoints:
 
@@ -52,7 +52,7 @@ La API expone los siguientes endpoints:
 - Parámetros opcionales: `page`, `per_page`, `filters[mag_type]`.
 - `GET /api/features/:id`: Retorna un evento sísmico específico por su ID.
 
-### POST Crear un Comentario
+### POST Crear un Comentario 📲
 
 Este endpoint permite crear un comentario asociado a una característica sísmica específica (feature).
 
@@ -96,3 +96,35 @@ Este endpoint permite crear un comentario asociado a una característica sísmic
 
     Contenido: Error indicando que el cuerpo del comentario no puede estar vacío.
 
+
+## Frontend de la Aplicación 🎃
+
+Junto a la API, se ha desarrollado una interfaz de usuario utilizando React que permite visualizar y filtrar los eventos sísmicos.
+
+### Ejecución del Proyecto React
+
+Para iniciar la aplicación React:
+
+1. Navega a la carpeta del cliente dentro del proyecto:
+
+    `cd client`
+
+2. Instala las dependencias de Node.js:
+
+    `npm install`
+
+3. Inicia la aplicación:
+
+    `npm start`
+
+Esto lanzará la aplicación React en el puerto por defecto 3000, o en un puerto diferente si se configuró así.
+
+### Funcionalidades Implementadas
+
+- Visualización de eventos sísmicos en una tabla responsive.
+- Paginación de resultados.
+- Filtrado de eventos por tipo de magnitud (`mag_type`).
+
+### Estilos y Media Queries ✨
+
+Se han aplicado estilos CSS modernos para garantizar una experiencia de usuario agradable y responsiva. Esto incluye media queries para ajustar la visualización de la aplicación en diferentes tamaños de dispositivo.
